@@ -20,15 +20,8 @@
 
 from bika.lims.catalog import SETUP_CATALOG
 from plone.dexterity.content import Item
-from plone.supermodel import model
+from senaite.abx.interfaces import IAntibioticClass
 from zope.interface import implementer
-
-
-class IAntibioticClass(model.Schema):
-    """Antibiotic class content interface
-    """
-    # Implements IBasic behavior (title + description)
-    pass
 
 
 @implementer(IAntibioticClass)

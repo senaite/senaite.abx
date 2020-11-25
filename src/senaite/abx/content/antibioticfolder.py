@@ -19,20 +19,11 @@
 # Some rights reserved, see README and LICENSE.
 
 from plone.dexterity.content import Container
-from plone.supermodel import model
-from senaite.core.interfaces import IHideActionsMenu
+from senaite.abx.interfaces import IAntibioticFolder
 from zope.interface import implementer
 
 
-class IAntibioticFolder(model.Schema):
-    """Antibiotics folder interface
-    """
-    # Implements IBasic behavior (title + description)
-    pass
-
-
-@implementer(IAntibioticFolder, IHideActionsMenu)
+@implementer(IAntibioticFolder)
 class AntibioticFolder(Container):
-    """Antibiotics folder
+    """A folder for Antibiotics
     """
-    pass

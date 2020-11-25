@@ -18,7 +18,10 @@
 # Copyright 2020 by it's authors.
 # Some rights reserved, see README and LICENSE.
 
+from bika.lims.interfaces import IDoNotSupportSnapshots
+from senaite.core.interfaces import IHideActionsMenu
 from senaite.lims.interfaces import ISenaiteLIMS
+from zope.interface import Interface
 
 
 class ISenaiteABXLayer(ISenaiteLIMS):
@@ -26,4 +29,24 @@ class ISenaiteABXLayer(ISenaiteLIMS):
     This interface is referred in profiles/default/browserlayer.xml.
     All views and viewlets register against this layer will appear in the site
     only when the add-on installer has been run.
+    """
+
+
+class IAntibiotic(Interface):
+    """Marker interface for Antibiotic content
+    """
+
+
+class IAntibioticClass(Interface):
+    """Marker interface for AntibioticClass content
+    """
+
+
+class IAntibioticClassFolder(IHideActionsMenu, IDoNotSupportSnapshots):
+    """Marker interface for AntibioticClassFolder content
+    """
+
+
+class IAntibioticFolder(IHideActionsMenu, IDoNotSupportSnapshots):
+    """Marker interface for AntibioticFolder content
     """

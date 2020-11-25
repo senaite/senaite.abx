@@ -17,16 +17,3 @@
 #
 # Copyright 2020 by it's authors.
 # Some rights reserved, see README and LICENSE.
-
-from bika.lims.catalog import SETUP_CATALOG
-from plone.dexterity.content import Item
-from senaite.abx.interfaces import IAntibiotic
-from zope.interface import implementer
-
-
-@implementer(IAntibiotic)
-class Antibiotic(Item):
-    """Antibiotic content
-    """
-    # Catalogs where this type will be catalogued
-    _catalogs = [SETUP_CATALOG]
