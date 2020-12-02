@@ -29,6 +29,7 @@ ANTIBIOTIC_CLASSES = [
     _("Macrolides"),
     _("Monobactams"),
     _("Penicillins"),
+    _("Tetracyclines"),
     _("Other"),
 ]
 
