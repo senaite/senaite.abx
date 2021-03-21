@@ -61,10 +61,10 @@ class AntibioticFolderView(ListingView):
                 "title": _c("Title"),
                 "index": "sortable_title"
             }),
-            ("Abbreviation", {
+            ("abbreviation", {
                 "title": _("Abbreviation"),
             }),
-            ("Category", {
+            ("category", {
                 "title": _("Class"),
             }),
             ("Description", {
@@ -129,10 +129,11 @@ class AntibioticFolderView(ListingView):
         obj = api.get_object(obj)
         antibiotic_class = obj.antibiotic_class
         item["replace"]["Title"] = get_link_for(obj)
-        item["replace"]["Category"] = get_link_for(antibiotic_class)
-        item["Abbreviation"] = obj.abbreviation
-        item["category"] = api.get_title(antibiotic_class)
-        return item
+        item["abbreviation"] = obj.abbreviation
+        item["category"] = _("Other")
+        if antibiotic_class:
+            item["category"] = api.get_title(antibiotic_class)
+            item["replace"]["category"] = get_link_for(antibiotic_class)
 
     def get_children_hook(self, parent_uid, child_uids=None):
         """Hook to get the children of an item
