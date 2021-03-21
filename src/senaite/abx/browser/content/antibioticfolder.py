@@ -134,6 +134,7 @@ class AntibioticFolderView(ListingView):
         if antibiotic_class:
             item["category"] = api.get_title(antibiotic_class)
             item["replace"]["category"] = get_link_for(antibiotic_class)
+        return item
 
     def get_children_hook(self, parent_uid, child_uids=None):
         """Hook to get the children of an item
