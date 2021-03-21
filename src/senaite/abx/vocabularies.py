@@ -40,11 +40,12 @@ class AntibioticClassesVocabulary(object):
             "sort_on": "sortable_title",
             "sort_order": "ascending",
         }
+        items = []
         brains = api.search(query, SETUP_CATALOG)
-        items = [
-            SimpleTerm(api.get_uid(brain), title=api.get_title(brain))
-            for brain in brains
-        ]
+        for brain in brains:
+            uid = api.get_uid(brain)
+            title = api.get_title(brain)
+            items.append(SimpleTerm(uid, uid, title))
 
         return SimpleVocabulary(items)
 
