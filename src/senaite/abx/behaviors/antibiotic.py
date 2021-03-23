@@ -39,9 +39,8 @@ class IAntibioticBehavior(model.Schema):
 
     antibiotic_class = schema.Choice(
         title=_(u"Antibiotic class"),
-        vocabulary="senaite.abx.vocabularies.antibiotic_classes",
+        source="senaite.abx.vocabularies.antibiotic_classes",
         required=False,
-        missing_value=[],
     )
 
 
@@ -67,6 +66,6 @@ class Antibiotic(object):
     def _set_antibiotic_class(self, value):
         if api.is_uid(value) or api.is_dexterity_content(value):
             value = api.get_uid(value)
-            self.context.antibiotic = value
+            self.context.antibiotic_class = value
 
     antibiotic_class = property(_get_antibiotic_class, _set_antibiotic_class)
