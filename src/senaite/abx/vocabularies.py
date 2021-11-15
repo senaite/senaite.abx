@@ -19,7 +19,7 @@
 # Some rights reserved, see README and LICENSE.
 
 from bika.lims import api
-from bika.lims.catalog import SETUP_CATALOG
+from senaite.core.catalog import SETUP_CATALOG
 from zope.interface import implementer
 from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleTerm
