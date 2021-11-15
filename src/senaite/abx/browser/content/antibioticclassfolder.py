@@ -21,9 +21,9 @@
 import collections
 
 from bika.lims import _
-from bika.lims.catalog import SETUP_CATALOG
 from bika.lims.utils import get_link_for
 from senaite.app.listing import ListingView
+from senaite.core.catalog import SETUP_CATALOG
 
 
 class AntibioticClassFolderView(ListingView):
