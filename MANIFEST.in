@@ -2,8 +2,7 @@ include LICENSE
 include *.rst
 include *.md
 exclude MANIFEST.in
-recursive-exclude static *
-recursive-exclude docs *
+recursive-include docs *
 recursive-include src/senaite/abx *
 recursive-exclude src/senaite/abx *.pyc
 recursive-exclude src/senaite/abx/locales/.tx *
