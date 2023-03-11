@@ -156,7 +156,7 @@ def setup_antibiotics(portal):
             continue
 
         obj = api.create(folder, "Antibiotic", title=name)
-        obj.antibiotic_class = api.get_uid(a_class)
+        obj.setAntibioticClass(a_class)
         obj.abbreviation = props.get("abbreviation")
         obj.reindexObject()
 

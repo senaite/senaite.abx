@@ -19,10 +19,14 @@
 # Some rights reserved, see README and LICENSE.
 
 from bika.lims import api
+from plone.autoform import directives
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.dexterity.interfaces import IDexterityContent
 from plone.supermodel import model
 from senaite.abx import messageFactory as _
+from senaite.core.catalog import SETUP_CATALOG
+from senaite.core.schema import UIDReferenceField
+from senaite.core.z3cform.widgets.uidreference import UIDReferenceWidget
 from zope import schema
 from zope.component import adapter
 from zope.interface import implementer
@@ -37,10 +41,30 @@ class IAntibioticBehavior(model.Schema):
         required=True,
     )
 
-    antibiotic_class = schema.Choice(
+    antibiotic_class = UIDReferenceField(
         title=_(u"Antibiotic class"),
-        source="senaite.abx.vocabularies.antibiotic_classes",
+        allowed_types=("AntibioticClass", ),
+        multi_valued=False,
         required=False,
+    )
+
+    directives.widget(
+        "antibiotic_class",
+        UIDReferenceWidget,
+        display_template="<a href='${url}'>${title}</a>",
+        query={
+            "portal_type": "AntibioticClass",
+            "is_active": True,
+            "sort_on": "sortable_title",
+            "sort_order": "ascending",
+        },
+        columns=[
+            {
+                "name": "title",
+                "label": _(u"column_label_title", default=u"Title"),
+            }
+        ],
+        catalog=SETUP_CATALOG
     )
 
 
@@ -61,7 +85,10 @@ class Antibiotic(object):
     abbreviation = property(_get_abbreviation, _set_abbreviation)
 
     def _get_antibiotic_class(self):
-        return getattr(self.context, "antibiotic_class", None)
+        uid = getattr(self.context, "antibiotic_class", None)
+        if isinstance(uid, list):
+            uid = uid[0]
+        return uid
 
     def _set_antibiotic_class(self, value):
         if api.is_uid(value) or api.is_dexterity_content(value):

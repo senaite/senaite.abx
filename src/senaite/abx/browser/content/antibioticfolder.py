@@ -127,9 +127,9 @@ class AntibioticFolderView(ListingView):
         :index: current index of the item
         """
         obj = api.get_object(obj)
-        antibiotic_class = obj.antibiotic_class
         item["replace"]["Title"] = get_link_for(obj)
-        item["abbreviation"] = obj.abbreviation
+        item["abbreviation"] = obj.getAbbreviation()
+        antibiotic_class = obj.getAntibioticClass()
         item["category"] = _("Other")
         if antibiotic_class:
             item["category"] = api.get_title(antibiotic_class)
