@@ -60,14 +60,14 @@ class Antibiotic(Item):
 
     @security.protected(permissions.View)
     def getRawAntibioticClass(self):
-        """Returns the default contact for samples assigned to this project
+        """Returns the UID of the antibiotic class
         """
         fields = api.get_fields(self)
         return fields.get("antibiotic_class").get_raw(self)
 
     @security.protected(permissions.ModifyPortalContent)
     def setAntibioticClass(self, value):
-        """Returns the Antibiotic class this antibiotic is assigned to
+        """Sets the antibiotic class for this antibiotic
         """
         fields = api.get_fields(self)
         fields.get("antibiotic_class").set(self, value)
