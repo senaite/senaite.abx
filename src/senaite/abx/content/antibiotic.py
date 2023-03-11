@@ -45,11 +45,11 @@ class Antibiotic(Item):
         return fields.get("abbreviation").get(self)
 
     @security.protected(permissions.ModifyPortalContent)
-    def setAbbreviation(self):
+    def setAbbreviation(self, value):
         """Sets the abbreviation for this antibiotic
         """
         fields = api.get_fields(self)
-        return fields.get("abbreviation").get(self)
+        fields.get("abbreviation").set(self, value)
 
     @security.protected(permissions.View)
     def getAntibioticClass(self):
