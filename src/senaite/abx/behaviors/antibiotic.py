@@ -86,6 +86,8 @@ class Antibiotic(object):
 
     def _get_antibiotic_class(self):
         uid = getattr(self.context, "antibiotic_class", None)
+        if not uid:
+            return None
         if isinstance(uid, list):
             uid = uid[0]
         return uid
