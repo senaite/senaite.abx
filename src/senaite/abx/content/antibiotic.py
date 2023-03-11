@@ -65,7 +65,7 @@ class Antibiotic(Item):
         fields = api.get_fields(self)
         return fields.get("antibiotic_class").get_raw(self)
 
-    @security.protected(permissions.View)
+    @security.protected(permissions.ModifyPortalContent)
     def setAntibioticClass(self, value):
         """Returns the Antibiotic class this antibiotic is assigned to
         """
