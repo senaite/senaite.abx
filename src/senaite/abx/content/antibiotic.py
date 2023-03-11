@@ -18,7 +18,10 @@
 # Copyright 2020-2022 by it's authors.
 # Some rights reserved, see README and LICENSE.
 
+from AccessControl import ClassSecurityInfo
+from bika.lims import api
 from plone.dexterity.content import Item
+from Products.CMFCore import permissions
 from senaite.abx.interfaces import IAntibiotic
 from senaite.core.catalog import SETUP_CATALOG
 from zope.interface import implementer
@@ -30,3 +33,41 @@ class Antibiotic(Item):
     """
     # Catalogs where this type will be catalogued
     _catalogs = [SETUP_CATALOG]
+
+    security = ClassSecurityInfo()
+    exclude_from_nav = True
+
+    @security.protected(permissions.View)
+    def getAbbreviation(self):
+        """Returns the abbreviation of this antibiotic
+        """
+        fields = api.get_fields(self)
+        return fields.get("abbreviation").get(self)
+
+    @security.protected(permissions.ModifyPortalContent)
+    def setAbbreviation(self, value):
+        """Sets the abbreviation for this antibiotic
+        """
+        fields = api.get_fields(self)
+        fields.get("abbreviation").set(self, value)
+
+    @security.protected(permissions.View)
+    def getAntibioticClass(self):
+        """Returns the Antibiotic class this antibiotic is assigned to
+        """
+        fields = api.get_fields(self)
+        return fields.get("antibiotic_class").get(self)
+
+    @security.protected(permissions.View)
+    def getRawAntibioticClass(self):
+        """Returns the UID of the antibiotic class
+        """
+        fields = api.get_fields(self)
+        return fields.get("antibiotic_class").get_raw(self)
+
+    @security.protected(permissions.ModifyPortalContent)
+    def setAntibioticClass(self, value):
+        """Sets the antibiotic class for this antibiotic
+        """
+        fields = api.get_fields(self)
+        fields.get("antibiotic_class").set(self, value)

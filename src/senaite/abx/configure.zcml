@@ -17,11 +17,6 @@
   <include package=".behaviors"/>
   <include package=".browser"/>
 
-  <!-- Vocabularies -->
-  <utility
-      component="senaite.abx.vocabularies.AntibioticClassesVocabularyFactory"
-      name="senaite.abx.vocabularies.antibiotic_classes" />
-
   <!-- Default profile -->
   <genericsetup:registerProfile
     name="default"
