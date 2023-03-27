@@ -4,6 +4,13 @@
     i18n_domain="senaite.abx">
 
   <genericsetup:upgradeStep
+      title="Upgrade to SENAITE ABX 1.2.0"
+      source="1100"
+      destination="1200"
+      handler=".v01_02_000.upgrade"
+      profile="senaite.abx:default"/>
+
+  <genericsetup:upgradeStep
       title="Upgrade to SENAITE ABX 1.1.0"
       source="1.0.0"
       destination="1100"
