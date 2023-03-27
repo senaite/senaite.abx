@@ -1,12 +1,15 @@
 # --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
 # SOME DESCRIPTIVE TITLE.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Translators:
+# Jordi Puiggené <jpuiggene@naralabs.com>, 2023
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-06-17 17:57+0000\n"
+"POT-Creation-Date: 2023-03-27 07:18+0000\n"
 "PO-Revision-Date: 2022-06-17 17:57+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Jordi Puiggené <jpuiggene@naralabs.com>, 2023\n"
 "Language-Team: Spanish (https://www.transifex.com/senaite/teams/139382/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,18 +21,18 @@ msgstr ""
 "Domain: senaite.abx\n"
 "Language: es\n"
 
-#: senaite/abx/behaviors/antibiotic.py:36
+#: senaite/abx/behaviors/antibiotic.py:40
 #: senaite/abx/browser/content/antibioticfolder.py:65
 msgid "Abbreviation"
-msgstr ""
+msgstr "Abreviatura"
 
 #: senaite/abx/browser/content/antibioticclassfolder.py:66
 msgid "Active"
-msgstr ""
+msgstr "Activos"
 
 #: senaite/abx/browser/content/antibioticclassfolder.py:45
 msgid "Add"
-msgstr ""
+msgstr "Añadir"
 
 #: senaite/abx/behaviors/configure.zcml:16
 msgid "Adds Antibiotic behavior"
@@ -48,7 +51,7 @@ msgstr ""
 msgid "Antibiotic"
 msgstr ""
 
-#: senaite/abx/behaviors/antibiotic.py:41
+#: senaite/abx/behaviors/antibiotic.py:45
 #: senaite/abx/profiles/default/types/AntibioticClass.xml
 msgid "Antibiotic class"
 msgstr ""
@@ -61,7 +64,7 @@ msgstr ""
 msgid "Antibiotics"
 msgstr ""
 
-#: senaite/abx/configure.zcml:33
+#: senaite/abx/configure.zcml:29
 msgid "Antibiotics handling for SENAITE"
 msgstr ""
 
@@ -106,11 +109,11 @@ msgstr ""
 msgid "Penicillins"
 msgstr ""
 
-#: senaite/abx/configure.zcml:33
+#: senaite/abx/configure.zcml:29
 msgid "SENAITE ABX"
 msgstr ""
 
-#: senaite/abx/configure.zcml:51
+#: senaite/abx/configure.zcml:47
 msgid "SENAITE ABX (uninstall)"
 msgstr ""
 
@@ -120,4 +123,9 @@ msgstr ""
 
 #: senaite/abx/browser/content/antibioticclassfolder.py:54
 msgid "Title"
+msgstr ""
+
+#. Default: "Title"
+#: senaite/abx/behaviors/antibiotic.py:64
+msgid "column_label_title"
 msgstr ""

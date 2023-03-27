@@ -1,10 +1,10 @@
-# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-# SOME DESCRIPTIVE TITLE.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#--- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+#SOME DESCRIPTIVE TITLE.
+#FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-06-17 17:57+0000\n"
+"POT-Creation-Date: 2023-03-27 07:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: senaite.abx\n"
 
-#: senaite.abx/src/senaite/abx/behaviors/antibiotic.py:36
+#: senaite.abx/src/senaite/abx/behaviors/antibiotic.py:40
 #: senaite.abx/src/senaite/abx/browser/content/antibioticfolder.py:65
 msgid "Abbreviation"
 msgstr ""
@@ -47,7 +47,7 @@ msgstr ""
 msgid "Antibiotic"
 msgstr ""
 
-#: senaite.abx/src/senaite/abx/behaviors/antibiotic.py:41
+#: senaite.abx/src/senaite/abx/behaviors/antibiotic.py:45
 #: senaite.abx/src/senaite/abx/profiles/default/types/AntibioticClass.xml
 msgid "Antibiotic class"
 msgstr ""
@@ -60,7 +60,7 @@ msgstr ""
 msgid "Antibiotics"
 msgstr ""
 
-#: senaite.abx/src/senaite/abx/configure.zcml:33
+#: senaite.abx/src/senaite/abx/configure.zcml:29
 msgid "Antibiotics handling for SENAITE"
 msgstr ""
 
@@ -105,11 +105,11 @@ msgstr ""
 msgid "Penicillins"
 msgstr ""
 
-#: senaite.abx/src/senaite/abx/configure.zcml:33
+#: senaite.abx/src/senaite/abx/configure.zcml:29
 msgid "SENAITE ABX"
 msgstr ""
 
-#: senaite.abx/src/senaite/abx/configure.zcml:51
+#: senaite.abx/src/senaite/abx/configure.zcml:47
 msgid "SENAITE ABX (uninstall)"
 msgstr ""
 
@@ -119,4 +119,9 @@ msgstr ""
 
 #: senaite.abx/src/senaite/abx/browser/content/antibioticclassfolder.py:54
 msgid "Title"
+msgstr ""
+
+#. Default: "Title"
+#: senaite.abx/src/senaite/abx/behaviors/antibiotic.py:64
+msgid "column_label_title"
 msgstr ""
