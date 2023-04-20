@@ -4,7 +4,8 @@ Changelog
 1.2.0 (unreleased)
 ------------------
 
-- #9 Remove IAntibioticBehavior and make Antibiotic folderish
+- #10 Do not allow antibiotics with same title and/or abbreviation
+-  #9 Remove IAntibioticBehavior and make Antibiotic folderish
 
 
 1.1.0 (2023-03-27)
