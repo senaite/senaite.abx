@@ -19,6 +19,7 @@
 # Some rights reserved, see README and LICENSE.
 
 from AccessControl import ClassSecurityInfo
+from bika.lims import api
 from plone.autoform import directives
 from plone.supermodel import model
 from Products.CMFCore import permissions
@@ -30,6 +31,27 @@ from senaite.core.schema import UIDReferenceField
 from senaite.core.z3cform.widgets.uidreference import UIDReferenceWidget
 from zope import schema
 from zope.interface import implementer
+from zope.interface import Invalid
+from zope.interface import invariant
+
+
+def validly(data, field_name):
+    """Returns whether the value from data for the field_name passed in can
+    be validated or not
+    """
+    value = getattr(data, field_name, None)
+    if not value:
+        return False
+
+    # https://community.plone.org/t/dexterity-unique-field-validation
+    context = getattr(data, "__context__", None)
+    if context is not None:
+        old_value = getattr(context, field_name, None)
+        if value == old_value:
+            # nothing changed
+            return False
+
+    return True
 
 
 class IAntibioticSchema(model.Schema):
@@ -75,6 +97,30 @@ class IAntibioticSchema(model.Schema):
         ],
         catalog=SETUP_CATALOG
     )
+
+    @invariant
+    def validate_title(data):
+        """Checks if the title is unique
+        """
+        if not validly(data, "title"):
+            return
+
+        cat = api.get_tool(SETUP_CATALOG)
+        if cat(portal_type="Antibiotic", title=data.title):
+            raise Invalid(_("Title must be unique"))
+
+    @invariant
+    def validate_abbreviation(data):
+        """Checks if the abbreviation is unique
+        """
+        if not validly(data, "abbreviation"):
+            return
+
+        cat = api.get_tool(SETUP_CATALOG)
+        for brain in cat(portal_type="Antibiotic"):
+            antibiotic = api.get_object(brain)
+            if antibiotic.abbreviation == data.abbreviation:
+                raise Invalid(_("Abbreviation must be unique"))
 
 
 @implementer(IAntibiotic, IAntibioticSchema)
