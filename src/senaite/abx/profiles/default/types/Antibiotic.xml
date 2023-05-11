@@ -43,7 +43,7 @@
   <property name="add_permission">cmf.AddPortalContent</property>
 
   <!-- Python class for content items of this sort -->
-  <property name="schema">senaite.abx.content.antibiotic.IAntibiotic</property>
+  <property name="schema">senaite.abx.content.antibiotic.IAntibioticSchema</property>
   <property name="klass">senaite.abx.content.antibiotic.Antibiotic</property>
 
   <!-- Dexterity behaviours for this type -->
