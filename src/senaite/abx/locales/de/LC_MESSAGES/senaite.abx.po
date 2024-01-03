@@ -4,10 +4,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-03-27 07:18+0000\n"
+"POT-Creation-Date: 2024-01-03 10:56+0000\n"
 "PO-Revision-Date: 2022-06-17 17:57+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: German (https://www.transifex.com/senaite/teams/139382/de/)\n"
+"Language-Team: German (https://app.transifex.com/senaite/teams/139382/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,9 +18,13 @@ msgstr ""
 "Domain: senaite.abx\n"
 "Language: de\n"
 
-#: senaite/abx/behaviors/antibiotic.py:40
 #: senaite/abx/browser/content/antibioticfolder.py:65
+#: senaite/abx/content/antibiotic.py:71
 msgid "Abbreviation"
+msgstr ""
+
+#: senaite/abx/content/antibiotic.py:123
+msgid "Abbreviation must be unique"
 msgstr ""
 
 #: senaite/abx/browser/content/antibioticclassfolder.py:66
@@ -31,10 +35,6 @@ msgstr ""
 msgid "Add"
 msgstr ""
 
-#: senaite/abx/behaviors/configure.zcml:16
-msgid "Adds Antibiotic behavior"
-msgstr ""
-
 #: senaite/abx/browser/content/antibioticclassfolder.py:78
 msgid "All"
 msgstr ""
@@ -43,12 +43,11 @@ msgstr ""
 msgid "Aminoglycosides"
 msgstr ""
 
-#: senaite/abx/behaviors/configure.zcml:16
 #: senaite/abx/profiles/default/types/Antibiotic.xml
 msgid "Antibiotic"
 msgstr ""
 
-#: senaite/abx/behaviors/antibiotic.py:45
+#: senaite/abx/content/antibiotic.py:76
 #: senaite/abx/profiles/default/types/AntibioticClass.xml
 msgid "Antibiotic class"
 msgstr ""
@@ -61,7 +60,7 @@ msgstr ""
 msgid "Antibiotics"
 msgstr ""
 
-#: senaite/abx/configure.zcml:29
+#: senaite/abx/configure.zcml:28
 msgid "Antibiotics handling for SENAITE"
 msgstr ""
 
@@ -106,11 +105,11 @@ msgstr ""
 msgid "Penicillins"
 msgstr ""
 
-#: senaite/abx/configure.zcml:29
+#: senaite/abx/configure.zcml:28
 msgid "SENAITE ABX"
 msgstr ""
 
-#: senaite/abx/configure.zcml:47
+#: senaite/abx/configure.zcml:46
 msgid "SENAITE ABX (uninstall)"
 msgstr ""
 
@@ -122,7 +121,11 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
+#: senaite/abx/content/antibiotic.py:110
+msgid "Title must be unique"
+msgstr ""
+
 #. Default: "Title"
-#: senaite/abx/behaviors/antibiotic.py:64
+#: senaite/abx/content/antibiotic.py:95
 msgid "column_label_title"
 msgstr ""

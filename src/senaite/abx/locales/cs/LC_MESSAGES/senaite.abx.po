@@ -7,10 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-03-27 07:18+0000\n"
+"POT-Creation-Date: 2024-01-03 10:56+0000\n"
 "PO-Revision-Date: 2022-06-17 17:57+0000\n"
 "Last-Translator: Jiří Podhorecký, 2023\n"
-"Language-Team: Czech (https://www.transifex.com/senaite/teams/139382/cs/)\n"
+"Language-Team: Czech (https://app.transifex.com/senaite/teams/139382/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,10 +21,14 @@ msgstr ""
 "Domain: senaite.abx\n"
 "Language: cs\n"
 
-#: senaite/abx/behaviors/antibiotic.py:40
 #: senaite/abx/browser/content/antibioticfolder.py:65
+#: senaite/abx/content/antibiotic.py:71
 msgid "Abbreviation"
 msgstr "Zkratka"
+
+#: senaite/abx/content/antibiotic.py:123
+msgid "Abbreviation must be unique"
+msgstr ""
 
 #: senaite/abx/browser/content/antibioticclassfolder.py:66
 msgid "Active"
@@ -34,10 +38,6 @@ msgstr "Aktivní"
 msgid "Add"
 msgstr "Přidat"
 
-#: senaite/abx/behaviors/configure.zcml:16
-msgid "Adds Antibiotic behavior"
-msgstr "Přidává chování antibiotik"
-
 #: senaite/abx/browser/content/antibioticclassfolder.py:78
 msgid "All"
 msgstr "Vše"
@@ -46,12 +46,11 @@ msgstr "Vše"
 msgid "Aminoglycosides"
 msgstr "Aminoglykosidy"
 
-#: senaite/abx/behaviors/configure.zcml:16
 #: senaite/abx/profiles/default/types/Antibiotic.xml
 msgid "Antibiotic"
 msgstr "Antibiotika"
 
-#: senaite/abx/behaviors/antibiotic.py:45
+#: senaite/abx/content/antibiotic.py:76
 #: senaite/abx/profiles/default/types/AntibioticClass.xml
 msgid "Antibiotic class"
 msgstr "Třída antibiotik"
@@ -64,7 +63,7 @@ msgstr "Třídy antibiotik"
 msgid "Antibiotics"
 msgstr "Antibiotika"
 
-#: senaite/abx/configure.zcml:29
+#: senaite/abx/configure.zcml:28
 msgid "Antibiotics handling for SENAITE"
 msgstr "Zacházení s antibiotiky pro SENAITE"
 
@@ -109,11 +108,11 @@ msgstr "Ostatní"
 msgid "Penicillins"
 msgstr "Peniciliny"
 
-#: senaite/abx/configure.zcml:29
+#: senaite/abx/configure.zcml:28
 msgid "SENAITE ABX"
 msgstr "SENAITE ABX"
 
-#: senaite/abx/configure.zcml:47
+#: senaite/abx/configure.zcml:46
 msgid "SENAITE ABX (uninstall)"
 msgstr "SENAITE ABX (odinstalace)"
 
@@ -125,7 +124,11 @@ msgstr "Tetracykliny"
 msgid "Title"
 msgstr "Název"
 
+#: senaite/abx/content/antibiotic.py:110
+msgid "Title must be unique"
+msgstr ""
+
 #. Default: "Title"
-#: senaite/abx/behaviors/antibiotic.py:64
+#: senaite/abx/content/antibiotic.py:95
 msgid "column_label_title"
 msgstr ""
