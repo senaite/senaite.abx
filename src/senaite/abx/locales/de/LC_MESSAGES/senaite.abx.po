@@ -1,12 +1,15 @@
 # --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
 # SOME DESCRIPTIVE TITLE.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Translators:
+# Ramon Bartl <rb@ridingbytes.com>, 2024
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-01-03 10:56+0000\n"
+"POT-Creation-Date: 2024-01-04 12:19+0000\n"
 "PO-Revision-Date: 2022-06-17 17:57+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Ramon Bartl <rb@ridingbytes.com>, 2024\n"
 "Language-Team: German (https://app.transifex.com/senaite/teams/139382/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +24,7 @@ msgstr ""
 #: senaite/abx/browser/content/antibioticfolder.py:65
 #: senaite/abx/content/antibiotic.py:71
 msgid "Abbreviation"
-msgstr ""
+msgstr "Abkürzung"
 
 #: senaite/abx/content/antibiotic.py:123
 msgid "Abbreviation must be unique"
@@ -29,97 +32,97 @@ msgstr ""
 
 #: senaite/abx/browser/content/antibioticclassfolder.py:66
 msgid "Active"
-msgstr ""
+msgstr "Aktiv"
 
 #: senaite/abx/browser/content/antibioticclassfolder.py:45
 msgid "Add"
-msgstr ""
+msgstr "Hinzufügen"
 
 #: senaite/abx/browser/content/antibioticclassfolder.py:78
 msgid "All"
-msgstr ""
+msgstr "Alle"
 
 #: senaite/abx/config.py:25
 msgid "Aminoglycosides"
-msgstr ""
+msgstr "Aminoglykoside"
 
 #: senaite/abx/profiles/default/types/Antibiotic.xml
 msgid "Antibiotic"
-msgstr ""
+msgstr "Antibiotikum"
 
 #: senaite/abx/content/antibiotic.py:76
 #: senaite/abx/profiles/default/types/AntibioticClass.xml
 msgid "Antibiotic class"
-msgstr ""
+msgstr "Antibiotische Klassifizierung"
 
 #: senaite/abx/profiles/default/types/AntibioticClassFolder.xml
 msgid "Antibiotic classes"
-msgstr ""
+msgstr "Antibiotische Klassifizierungen"
 
 #: senaite/abx/profiles/default/types/AntibioticFolder.xml
 msgid "Antibiotics"
-msgstr ""
+msgstr "Antibiotika"
 
 #: senaite/abx/configure.zcml:28
 msgid "Antibiotics handling for SENAITE"
-msgstr ""
+msgstr "Antibiotika Verwaltung für SENAITE"
 
 #: senaite/abx/config.py:26
 msgid "Carbapenems"
-msgstr ""
+msgstr "Carbapeneme"
 
 #: senaite/abx/config.py:27
 msgid "Cephalosporins"
-msgstr ""
+msgstr "Cephalosporine"
 
 #: senaite/abx/browser/content/antibioticfolder.py:68
 msgid "Class"
-msgstr ""
+msgstr "Klassifizierung"
 
 #: senaite/abx/browser/content/antibioticclassfolder.py:58
 msgid "Description"
-msgstr ""
+msgstr "Beschreibung"
 
 #: senaite/abx/config.py:28
 msgid "Fluoroquinolones"
-msgstr ""
+msgstr "Fluorchinolone"
 
 #: senaite/abx/browser/content/antibioticclassfolder.py:72
 msgid "Inactive"
-msgstr ""
+msgstr "Inaktiv"
 
 #: senaite/abx/config.py:29
 msgid "Macrolides"
-msgstr ""
+msgstr "Makrolide"
 
 #: senaite/abx/config.py:30
 msgid "Monobactams"
-msgstr ""
+msgstr "Monobactame"
 
 #: senaite/abx/browser/content/antibioticfolder.py:133
 #: senaite/abx/config.py:33
 msgid "Other"
-msgstr ""
+msgstr "Andere"
 
 #: senaite/abx/config.py:31
 msgid "Penicillins"
-msgstr ""
+msgstr "Penicilline"
 
 #: senaite/abx/configure.zcml:28
 msgid "SENAITE ABX"
-msgstr ""
+msgstr "SENAITE ABX"
 
 #: senaite/abx/configure.zcml:46
 msgid "SENAITE ABX (uninstall)"
-msgstr ""
+msgstr "SENAITE ABX (deinstallieren)"
 
 #: senaite/abx/config.py:32
 msgid "Tetracyclines"
-msgstr ""
+msgstr "Tetracycline"
 
 #: senaite/abx/browser/content/antibioticclassfolder.py:54
 msgid "Title"
-msgstr ""
+msgstr "Titel"
 
 #: senaite/abx/content/antibiotic.py:110
 msgid "Title must be unique"
