@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.2.0 (unreleased)
+1.2.0 (2024-01-04)
 ------------------
 
 - #10 Do not allow antibiotics with same title and/or abbreviation
