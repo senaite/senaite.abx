@@ -1,0 +1,12 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
+
+  <genericsetup:upgradeStep
+      title="Upgrade to SENAITE.ABX 1.4.0"
+      source="1300"
+      destination="1400"
+      handler=".v01_04_000.upgrade"
+      profile="senaite.abx:default"/>
+
+</configure>
