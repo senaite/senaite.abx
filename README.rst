@@ -1,6 +1,21 @@
 Antibiotics for SENAITE
 =======================
 
+.. image:: https://img.shields.io/pypi/v/senaite.abx.svg?style=flat-square
+    :target: https://pypi.python.org/pypi/senaite.abx
+
+.. image:: https://img.shields.io/github/actions/workflow/status/senaite/senaite.abx/build.yml?branch=master
+   :target: https://github.com/senaite/senaite.abx/actions/workflows/build.yml?query=branch:master
+
+.. image:: https://img.shields.io/github/issues-pr/senaite/senaite.abx.svg?style=flat-square
+    :target: https://github.com/senaite/senaite.abx/pulls
+
+.. image:: https://img.shields.io/github/issues/senaite/senaite.abx.svg?style=flat-square
+    :target: https://github.com/senaite/senaite.abx/issues
+
+.. image:: https://img.shields.io/badge/Made%20for%20SENAITE-%E2%AC%A1-lightgrey.svg
+   :target: https://www.senaite.com
+
 About
 -----
 
