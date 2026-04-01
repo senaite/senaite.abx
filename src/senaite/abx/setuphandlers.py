@@ -50,8 +50,8 @@ def setup_handler(context):
     setup_navigation_types(portal)
 
     # Setup initial data
-    setup_antibiotic_classes(portal)
-    setup_antibiotics(portal)
+    #setup_antibiotic_classes(portal)
+    #setup_antibiotics(portal)
 
     logger.info("{} setup handler [DONE]".format(PRODUCT_NAME.upper()))
 
